@@ -3,17 +3,22 @@ $('#commandDiv').terminal({
   help: function () {
     this.echo(
       '\n Commands:' +
-      '\n  help : see list of commands' +
-      '\n  ask type_of_language_model' +
-      '\n  example type_of_language_model' +
+      '\n  type: "help": see list of commands' +
+      '\n  type: "ask": ask what does specific language model means' +
+      '\n  type: "example": provide you one example of the language model' +
       '\n\n Types of Language Model: ' +
       '\n  - ngram' +
       '\n  - rnn' +
       '\n  - lstm' +
       '\n  - transformers' +
 
-      '\n\n V example input V' +
-      '\n\n    ask ngram' +
+      '\n\n -------------------------' +
+      '\n V possible input example V' +
+      '\n   (input one of the below commend)' +
+      '\n\n   ask ngram' +
+      '\n   ask rnn' +
+      '\n   example lstm' +
+      '\n   example transformers' +
       '\n\n (hint: case sensitive, please type in lower case)' +
       '\n'
     );
