@@ -5,13 +5,16 @@ $('#commandDiv').terminal({
       '\n  Step 1: pick a type of command ' +
       '\n  Step 2: pick a type of Language Model' +
       '\n  Step 3: form them together' +
-      '\n  Step 4: follow this equation: [command] + [sapce] + [name of language model]' +
+      '\n  Step 4: follow this equation: [command] + [space] + [name of language model]' +
+      '\n  (hint: do not add [] or +)' +
+      '\n  (hint: example: ask ngram)' +
       '\n' +
-      '\n Commands:' +
+      '\n Basic Commands:' +
       '\n  type: "help": see list of commands' +
       '\n  type: "about": see the about page' +
       '\n  type: "clear": delete all above command' +
-
+      '\n' +
+      '\n Commands:' +
       '\n  type: "ask": ask what does specific language model means' +
       '\n  type: "example": provide you one example of the language model' +
       '\n ' +
@@ -22,8 +25,9 @@ $('#commandDiv').terminal({
       '\n  type4: transformers' +
 
       '\n\n --------------------------' +
-      '\n V possible input example V' +
+      '\n V POSSIBLE INPUT EXAMPLE V' +
       '\n   (input one of the below command)' +
+      '\n   (copy and paste one of the example also works!)' +
       '\n ' +
       '\n   help' +
       '\n   clear' +
