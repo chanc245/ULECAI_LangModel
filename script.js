@@ -1,5 +1,4 @@
 $('#commandDiv').terminal({
-
   help: function () {
     this.echo(
       '\n Instruction:' +
@@ -10,9 +9,13 @@ $('#commandDiv').terminal({
       '\n' +
       '\n Commands:' +
       '\n  type: "help": see list of commands' +
+      '\n  type: "about": see the about page' +
+      '\n  type: "clear": delete all above command' +
+
       '\n  type: "ask": ask what does specific language model means' +
       '\n  type: "example": provide you one example of the language model' +
-      '\n\n Types of Language Model: ' +
+      '\n ' +
+      '\n Types of Language Model: ' +
       '\n  type1: ngram' +
       '\n  type2: rnn' +
       '\n  type3: lstm' +
@@ -20,13 +23,31 @@ $('#commandDiv').terminal({
 
       '\n\n --------------------------' +
       '\n V possible input example V' +
-      '\n   (input one of the below commend)' +
-      '\n\n   ask ngram' +
+      '\n   (input one of the below command)' +
+      '\n ' +
+      '\n   help' +
+      '\n   clear' +
+      '\n   ask ngram' +
       '\n   ask rnn' +
       '\n   example lstm' +
       '\n   example transformers' +
       '\n\n (hint: case sensitive, please type in lower case)' +
       '\n (hint:[command][space][type]) ' +
+      '\n'
+    );
+  },
+
+  about: function () {
+    this.echo(
+      '\n Purpose of this page:' +
+      '\n  Fun way to visualize informations about four types of Language Model: n-gram, RNN, LSTM, and Transformers.' +
+      '\n' +
+      '\n Code by: Christine Chang' +
+      '\n' +
+      '\n readmore: https://drive.google.com/file/d/1uarSLlf6TZXTvXPCjeKyy7pZh22K1KtF/view?usp=drive_link' +
+      '\n' +
+      '\n' +
+      '\n I hope you have a great day :D' +
       '\n'
     );
   },
