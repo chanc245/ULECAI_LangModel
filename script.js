@@ -2,17 +2,23 @@ $('#commandDiv').terminal({
 
   help: function () {
     this.echo(
+      '\n Instruction:' +
+      '\n  Step 1: pick a type of command ' +
+      '\n  Step 2: pick a type of Language Model' +
+      '\n  Step 3: form them together' +
+      '\n  Step 4: follow this equation: [command] + [sapce] + [name of language model]' +
+      '\n' +
       '\n Commands:' +
       '\n  type: "help": see list of commands' +
       '\n  type: "ask": ask what does specific language model means' +
       '\n  type: "example": provide you one example of the language model' +
       '\n\n Types of Language Model: ' +
-      '\n  - ngram' +
-      '\n  - rnn' +
-      '\n  - lstm' +
-      '\n  - transformers' +
+      '\n  type1: ngram' +
+      '\n  type2: rnn' +
+      '\n  type3: lstm' +
+      '\n  type4: transformers' +
 
-      '\n\n -------------------------' +
+      '\n\n --------------------------' +
       '\n V possible input example V' +
       '\n   (input one of the below commend)' +
       '\n\n   ask ngram' +
@@ -20,6 +26,7 @@ $('#commandDiv').terminal({
       '\n   example lstm' +
       '\n   example transformers' +
       '\n\n (hint: case sensitive, please type in lower case)' +
+      '\n (hint:[command][space][type]) ' +
       '\n'
     );
   },
@@ -27,30 +34,42 @@ $('#commandDiv').terminal({
   ask: function (element) {
     if (element == 'ngram') {
       this.echo(
+        '\n ----------' +
         '\n N-gram' +
         '\n' +
         '\n Models that predict the next word in a sequence based on the frequency of word pairs or groups in a text, assigning probabilities to word sequences.' +
+        '\n' +
+        '\n ----------' +
         '\n'
       );
     } else if (element == 'rnn') {
       this.echo(
+        '\n ----------' +
         '\n Recurrent Neural Networks (RNN)' +
         '\n' +
         '\n A type of neural network that uses a feedback loop to unroll the network, working well with different amounts of sequential data.' +
+        '\n' +
+        '\n ----------' +
         '\n'
       );
     } else if (element == 'lstm') {
       this.echo(
+        '\n ----------' +
         '\n Long Short-Term Memory (LSTM)' +
         '\n' +
         '\n A type of neural network built on the framework of RNNs. It incorporates a memory cell that can maintain information over longer sequences, thereby mitigating the limitations of the vanilla RNN.' +
+        '\n' +
+        '\n ----------' +
         '\n'
       );
     } else if (element == 'transformers') {
       this.echo(
+        '\n ----------' +
         '\n Transformers' +
         '\n' +
         '\n This language model(LM) revolutionized natural language processing(NLP) with parallel training on large datasets and efficient data handling. They learn word order from positional encodings in data and can be adapted for various NLP tasks like summarization and question answering.' +
+        '\n' +
+        '\n ----------' +
         '\n'
       );
     } else {
@@ -89,6 +108,7 @@ $('#commandDiv').terminal({
       const randomEx = ngram_ex[randomIndex];
 
       this.echo(
+        '\n ----------' +
         '\n N-gram example' +
         '\n' +
         randomEx +
@@ -96,6 +116,7 @@ $('#commandDiv').terminal({
       );
     } else if (element == 'rnn') {
       this.echo(
+        '\n ----------' +
         '\n Recurrent Neural Networks (RNN) output example' +
         '\n' +
         '\n Model: "sequential_1" ' +
@@ -119,6 +140,7 @@ $('#commandDiv').terminal({
       );
     } else if (element == 'lstm') {
       this.echo(
+        '\n ----------' +
         '\n Recurrent Neural Networks (RNN) output example' +
         '\n' +
         '\n Model: "sequential_1" ' +
@@ -142,6 +164,7 @@ $('#commandDiv').terminal({
       );
     } else if (element == 'transformers') {
       this.echo(
+        '\n ----------' +
         '\n Transformers example' +
         '\n Decorder-Only Transformers architecture -> Generative Pre-training Transformer (GPT) ' +
         '\n' +
@@ -155,4 +178,8 @@ $('#commandDiv').terminal({
       );
     }
   },
-}, { greetings: 'Welcome. Type \'help\' for command list' });
+}, {
+  greetings:
+    'Welcome :] ' +
+    '\n\nType \'help\' for command list'
+});
